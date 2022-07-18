@@ -1,4 +1,4 @@
-module myrpc-server
+module github.com/mponce/myrpc-server
 
 go 1.14
 
