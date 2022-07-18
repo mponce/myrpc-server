@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	api "github.com/mponce/myproto/go-proto"
+	pb "github.com/mponce/myproto/go-proto"
 	"github.com/mponce/myrpc-server/server"
 	"google.golang.org/grpc"
 	"log"
@@ -21,7 +21,7 @@ func main() {
 	grpcServer := grpc.NewServer()
 
 	// attach the Ping service to the server
-	api.RegisterPingServer(grpcServer, &s)
+	pb.RegisterPingServer(grpcServer, &s)
 
 	// start the server
 	if err := grpcServer.Serve(lis); err != nil {
